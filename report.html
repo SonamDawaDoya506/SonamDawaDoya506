@@ -1,0 +1,25 @@
+{% extends "temp_base.html" %}
+{% block content %}
+<div class="jumbotron">
+
+  <p>Let see how you performed</p>
+
+  {% if  report %}
+    <p>Your User Name fulfill all the conditions.</p>
+  {% else %}
+  <ul>
+    {% if not lower %}
+      <li>You did not use the lower case.</li>
+    {% endif %}
+    {% if not upper %}
+     <li>You did not use the upper case.</li>
+    {% endif %}
+    {% if not num_end %}
+     <li>You did not use the number.</li>
+    {% endif %}
+
+  </ul>
+  {% endif %}
+  
+</div>
+{% endblock %}

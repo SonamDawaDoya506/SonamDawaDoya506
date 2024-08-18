@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Website</h1>
+
+    <ul>
+      {%for item in puppies %}
+      <li>{{item}}</li>
+      {% endfor %}
+    </ul>
+
+    {% if "Rufus" in pupies %}
+      <p>Found you Rufus!</p>
+      {% else %}
+      <p>Hmmmm..Rufus is not in mylist </p>
+    {% endif %}
+
+    {% if user_logged_in %}
+      <p>Welcome back to your blog</p>
+      {% else %}
+      <p>Uppss... <strong>Please log in</strong> </p>
+    {% endif %}
+
+    {% if user_logged_in1 %}
+      <p>Welcome back to your blog</p>
+      {% else %}
+      <p><strong>Uppss... Please log in</strong> </p>
+    {% endif %}
+  </body>
+</html>
